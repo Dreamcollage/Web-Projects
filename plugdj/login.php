@@ -1,5 +1,9 @@
 <?php session_start(); /* Starts the session */
-	/* Check Login form submitted */	
+	/* Check Login form submitted */
+if(isset($_SESSION['username'])){
+	header("location:index.php");
+	exit;
+}
 	if(isset($_POST['Submit'])){
 		/* Define username and associated password array */
 		

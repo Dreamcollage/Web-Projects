@@ -6,6 +6,10 @@ if(!isset($_SESSION['username'])){
 ?>
     <html>
 
+    <head>
+        <title>Homepage</title>
+    </head>
+
     <body>
         Hello
         <?php 
@@ -13,7 +17,17 @@ if(!isset($_SESSION['username'])){
         ?>,
             <br> You are currently logged in.
             <br>
+            <iframe style="" src=""></iframe>
+            <br>
+            <form method="post">
+                <textarea style="resize: none; outline: none;" name="urlfield" placeholder="Enter Url Here" cols="30" rows="5"></textarea>
+                <br>
+                <input name="Submit" type="submit" value="Load Url">
+            </form>
+            <br>
+            <span style="position: fixed; bottom: 1em;">
             <a href="logout.php">Click here</a> to Logout.
+        </span>
     </body>
 
     </html>
