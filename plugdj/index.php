@@ -8,13 +8,17 @@ if(!isset($_SESSION['username'])){
 
     <head>
         <title>Homepage</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
 
     <body>
         Hello
         <?php 
     echo $_SESSION['username'];
-        ?>,
+        ?>
+        <br>
+        <span id="users"></span>
             <br> You are currently logged in.
             <br>
             <iframe style="" src=""></iframe>

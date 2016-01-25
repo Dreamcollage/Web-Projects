@@ -1,5 +1,17 @@
-<?php session_start(); /* Starts the session */
-	/* Check Login form submitted */
+<?php 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "plug";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+session_start();
 if(isset($_SESSION['username'])){
 	header("location:index.php");
 	exit;
